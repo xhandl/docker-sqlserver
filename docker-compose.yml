@@ -7,6 +7,7 @@ services:
         user: root
         volumes:
             - ./volumes/mssql/data:/var/opt/mssql/data
+            - ./volumes/mssql/backups:/var/opt/mssql/backups
         environment:
             ACCEPT_EULA: "Y"
             SA_PASSWORD: "${SQL_SERVER_SA_PASSWORD:-A123456*}"
