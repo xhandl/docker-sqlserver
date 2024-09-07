@@ -8,7 +8,7 @@ To start SQL Server on background via Docker just type:
 docker compose up -d
 ```
 
-Main parametrs can be modified via `.env` file.
+Main parameters can be modified via `.env` file.
 
 
 Default configuration:
