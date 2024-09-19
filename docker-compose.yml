@@ -15,7 +15,7 @@ services:
         networks:
             - sqlserver
         healthcheck:
-            test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "${SQL_SERVER_SA_PASSWORD}" -C -Q "SELECT 1" || exit 1
+            test: /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "${SQL_SERVER_SA_PASSWORD:-A123456*}" -C -Q "SELECT 1" || exit 1
             interval: 1m30s
             timeout: 10s
             retries: 3
